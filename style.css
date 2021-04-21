@@ -1,0 +1,21 @@
+*{ /*estou tirando qq referencia possa vir na página da web*/
+    padding: 0;
+    margin: 0;
+}
+
+input{ /*PRIORIZAR ! quero que todos os meus imputs fiquem assim!*/
+    width: 150px !important; /*importante força funcionar*/
+    height: 150px  !important;
+    font-size: 50pt !important;
+    text-align: center impo !important;
+}
+
+input[type = "number"] ::-webkit-outer-spin-button, input[type = "number"] ::-webkit-inner-spin-button
+{ /* quero alterar meu number que está dentro dos imputs*/
+    -webkit-appearance: 'none';
+    margin: 0;
+}
+
+input[type = "number"] { /* quero alterar meu number que está dentro dos imputs*/
+    -moz-appearance: none;
+}
