@@ -1,21 +1,38 @@
-*{ /*estou tirando qq referencia possa vir na página da web*/
+/*estou tirando qq referencia possa vir na página da web*/
+*{ 
     padding: 0;
     margin: 0;
 }
 
 input{ /*PRIORIZAR ! quero que todos os meus imputs fiquem assim!*/
     width: 150px !important; /*importante força funcionar*/
-    height: 150px  !important;
+    height: 150px !important;
     font-size: 50pt !important;
-    text-align: center impo !important;
+    text-align: center !important;
 }
 
-input[type = "number"] ::-webkit-outer-spin-button, input[type = "number"] ::-webkit-inner-spin-button
-{ /* quero alterar meu number que está dentro dos imputs*/
-    -webkit-appearance: 'none';
-    margin: 0;
+/* Tirar o botão de mais e menos do input tipo number */
+input[type="number"]::-webkit-outer-spin-button,
+input[type="number"]::-webkit-inner-spin-button {
+   -webkit-appearance: none;
+   margin: 0;
 }
 
 input[type = "number"] { /* quero alterar meu number que está dentro dos imputs*/
     -moz-appearance: none;
+}
+
+.time {
+color: white;
+text-align: center;
+width: 20rem;
+height: 20rem;
+border-radius: 10rem;
+display: flex;
+justify-content: center; /*horizontal*/
+align-items: center; /*vertical*/
+}
+
+h2{
+    font-size: 90pt;
 }

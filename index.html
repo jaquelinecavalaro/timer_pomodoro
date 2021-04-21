@@ -6,12 +6,12 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!--CSS do bootstrap-->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+        integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
     <!--css externo / meu css externo-->
     <link rel="stylesheet" href="./style.css">
     <!--fonte awesome-->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
     <!--icone-->
     <link rel="icon" href="./img/clock.png" type="image/png">
     <title>Timer Pomodoro</title>
@@ -41,52 +41,124 @@
     <!--Container-->
     <div class="container">
 
-        <div class="row d-flex justify-content-center mt-5 mb-5"><!--margem top 5 e margem button 5-->
+        <!--DIV CONFIG-->
+        <div class="row d-flex justify-content-center mt-5 mb-5">
+            <!--margem top 5 e margem button 5-->
             <!--to poscionando minha coluna para esquerda-->
 
             <div class="col-md-8">
                 <!--utilizando 8 colunas-->
-                <!--DIV CONFIG-->
+
                 <div id="config" class="row d-flex justify-content-center">
                     <!--toda coluna precisa pertencer a uma linha, uma row-->
 
                     <div class="col">
                         <!--quantidade de linha, vou deixar 12, q é o padrão do bootstrap. Se eu quisesse poderia criar mais uma div de cool e ai ficaria 6 + 6 e assim por diante-->
+
+                        <!--INPUTS-->
                         <div class="row d-flex justify-content-center">
-                            <!--essa será  a linha dos meus inputs-->
-                            <div class="col-md 3">
+
+                            <div class="col-md 3 justify-content-center">
                                 <!-- vou fazer 3 grupos de coluna de 3-->
                                 <div class="form-group">
-                                    <label class="d-flex justify-content-center text-white fw-bold" for="acao">Ação</label>
-                                    <input type="number" class="form-control form-control-lg bg-dark border-0 shadow text-white" id="acao">
-                                    
-                                  </div>
+                                    <label class="d-flex justify-content-center text-white fw-bold"
+                                        for="acao">Ação</label>
+                                    <input type="number"
+                                        class="form-control form-control-lg bg-dark border-0 shadow text-white"
+                                        id="acao">
+
+                                </div>
                             </div>
-                            <div class="col-md 3">
+                            <div class="col-md 3 justify-content-center">
                                 <!-- vou fazer 3 grupos de coluna de 3-->
                                 <div class="form-group">
-                                    <label class="d-flex justify-content-center text-white fw-bold" for="pausa">Pausa</label>
-                                    <input type="number" class="form-control" id="pausa">
-                                    
-                                  </div>
+                                    <label class="d-flex justify-content-center text-white fw-bold"
+                                        for="pausa">Pausa</label>
+                                    <input type="number"
+                                        class="form-control form-control-lg bg-dark border-0 shadow text-white"
+                                        id="pausa">
+
+                                </div>
                             </div>
-                            <div class="col-md 3">
+                            <div class="col-md 3 justify-content-center">
                                 <!-- vou fazer 3 grupos de coluna de 3-->
                                 <div class="form-group">
-                                    <label class="d-flex justify-content-center text-white fw-bold" for="sessoes">Sessões</label>
-                                    <input type="number" class="form-control" id="sessoes">
-                                    
-                                  </div>
+                                    <label class="d-flex justify-content-center text-white fw-bold"
+                                        for="sessoes">Sessões</label>
+                                    <input type="number"
+                                        class="form-control form-control-lg bg-dark border-0 shadow text-white"
+                                        id="sessoes">
+
+                                </div>
                             </div>
                         </div>
+                        <!--final inputs-->
+
+                        <!--inicio botão inciar-->
+                        <div class="row mt-5 mb-5 d-flex justify-content-center">
+                            <div class="col-md-9">
+                                <!-- 9 colunas pois é a soma dos mes imputs-->
+                                <button class="btn btn-danger shadow btn-lg btn-block">
+                                    Iniciar
+                                </button>
+                            </div>
+
+                        </div>
+
+                        <!--final Botao-->
+
                     </div>
 
                 </div>
-                <!--FINAL DIV CONFIG-->
+
 
             </div>
 
         </div>
+        <!--FINAL DIV CONFIG-->
+
+        <!--timer-->
+        <div id="timer" class="mt-0 d-flex justify-content-center" style="display: none;">
+            <div class="row mb-3">
+                <div class="col">
+                    <h3 id="title" class="text-center"></h3>
+                </div>
+            </div>
+
+            <!-- Relogio -->
+         <div class="row shadow time">
+            <div class="col-5 p-0 ">
+               <h2 id="minutes_ok"></h2>
+            </div>
+            <div class="col-1 p-0 d-flex justify-content-center">
+               <h2>:</h2>
+            </div>
+            <div class="col-5 pl-0">
+               <h2 id="seconds_ok"></h2>
+            </div>
+         </div>
+         <!-- /Relogio -->
+
+
+            <div class="row mb-3">
+                <div class="col">
+                    <h3 id="title_sessao" class="text-center text-secondary"></h3>
+                </div>
+        </div>
+
+
+        <!--timer FECHA-->
+
+        <!--FINALIZAÇÃO-->
+        <div id="fim" style="display: none;">
+            <h1 class="text-success text-center">Parabéns! Você finalizou suas tarefas.</h1>
+            <div class="row mt-5 mb-5 d-flex justify-content-center">
+               <div class="col-md-9 d-flex justify-content-center">
+                  <a href="./index.html" class="btn btn-danger shadow btn-lg">Inicio</a>
+               </div>
+            </div>
+         </div>
+        <!--FINAL FINZALIZAÇÃO-->
 
     </div>
 
