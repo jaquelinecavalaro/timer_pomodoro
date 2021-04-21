@@ -25,14 +25,14 @@
         <div class="ml-auto">
             <!--vai de dar margem automatica-->
             <a>
-                <i class="fa fa-pause text-white" style="font-size: 25pt;" aria-hidden="true"></i>
+                <i id='pause' class="fa fa-pause text-white" style="font-size: 25pt; display: none;" aria-hidden="true"></i>
             </a>
 
             <a>
-                <i class="fa fa-play text-white" style="font-size: 25pt;" aria-hidden="true"></i>
+                <i id='play' class="fa fa-play text-white" style="font-size: 25pt; display: none;" aria-hidden="true"></i>
             </a>
 
-            <audio src="./audio/lo-fi.mp3" type="audio/mpeg"></audio>
+            <audio id='lofi' src="./audio/lo-fi.mp3" type="audio/mpeg"></audio>
         </div>
 
     </nav>
@@ -58,7 +58,7 @@
                         <!--INPUTS-->
                         <div class="row d-flex justify-content-center">
 
-                            <div class="col-md 3 justify-content-center">
+                            <div class="col-md-3 justify-content-center">
                                 <!-- vou fazer 3 grupos de coluna de 3-->
                                 <div class="form-group">
                                     <label class="d-flex justify-content-center text-white fw-bold"
@@ -66,10 +66,10 @@
                                     <input type="number"
                                         class="form-control form-control-lg bg-dark border-0 shadow text-white"
                                         id="acao">
-
+                                        <small class="text-danger" id='erro_acao'></small>
                                 </div>
                             </div>
-                            <div class="col-md 3 justify-content-center">
+                            <div class="col-md-3 justify-content-center">
                                 <!-- vou fazer 3 grupos de coluna de 3-->
                                 <div class="form-group">
                                     <label class="d-flex justify-content-center text-white fw-bold"
@@ -77,10 +77,10 @@
                                     <input type="number"
                                         class="form-control form-control-lg bg-dark border-0 shadow text-white"
                                         id="pausa">
-
+                                        <small class="text-danger" id='erro_pausa'></small>
                                 </div>
                             </div>
-                            <div class="col-md 3 justify-content-center">
+                            <div class="col-md-3 justify-content-center">
                                 <!-- vou fazer 3 grupos de coluna de 3-->
                                 <div class="form-group">
                                     <label class="d-flex justify-content-center text-white fw-bold"
@@ -88,7 +88,7 @@
                                     <input type="number"
                                         class="form-control form-control-lg bg-dark border-0 shadow text-white"
                                         id="sessoes">
-
+                                        <small class="text-danger" id='erro_sessoes'></small>
                                 </div>
                             </div>
                         </div>
@@ -98,7 +98,7 @@
                         <div class="row mt-5 mb-5 d-flex justify-content-center">
                             <div class="col-md-9">
                                 <!-- 9 colunas pois é a soma dos mes imputs-->
-                                <button class="btn btn-danger shadow btn-lg btn-block">
+                                <button onclick="iniciar()" class="btn btn-danger shadow btn-lg btn-block">
                                     Iniciar
                                 </button>
                             </div>
@@ -118,7 +118,7 @@
         <!--FINAL DIV CONFIG-->
 
         <!--timer-->
-        <div id="timer" class="mt-0 d-flex justify-content-center" style="display: none;">
+        <div id="timer" class="mt-0 d-flex justify-content-center" >
             <div class="row mb-3">
                 <div class="col">
                     <h3 id="title" class="text-center"></h3>
@@ -137,9 +137,8 @@
                <h2 id="seconds_ok"></h2>
             </div>
          </div>
+
          <!-- /Relogio -->
-
-
             <div class="row mb-3">
                 <div class="col">
                     <h3 id="title_sessao" class="text-center text-secondary"></h3>

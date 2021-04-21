@@ -31,8 +31,12 @@ border-radius: 10rem;
 display: flex;
 justify-content: center; /*horizontal*/
 align-items: center; /*vertical*/
+margin: auto !important; /* para meu relogio ficar no meio */
 }
 
 h2{
     font-size: 90pt;
+}
+#timer{
+    display: none !important;
 }
