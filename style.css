@@ -23,7 +23,7 @@ input[type = "number"] { /* quero alterar meu number que está dentro dos imputs
 }
 
 .time {
-color: white;
+color: rgb(105, 101, 101);
 text-align: center;
 width: 20rem;
 height: 20rem;

@@ -11,6 +11,18 @@ var lofi = document.getElementById('lofi')
 var pause = document.getElementById('pause')
 var play = document.getElementById('play')
 
+function pausar(){
+    lofi.pause()
+    play.style.setProperty("display", "block", "important")
+    pause.style.setProperty("display", "none", "important")
+}
+
+function executar(){
+    lofi.play()
+    pause.style.setProperty("display", "block", "important")
+    play.style.setProperty("display", "none", "important")
+}
+
 function iniciar() {
 
     if (acao.value == 0) {
@@ -41,12 +53,12 @@ function iniciar() {
 
 function momentoAcao() {
 
-    let sessaoes_valor = localStorage.getItem('sessoes')
+    let sessoes_valor = localStorage.getItem('sessoes')
 
-    if (sessoes_valor != '1') {
-        document.getElementById('title_sessao').innerHTML = sessoes_valor + 'sessões restantes'
+    if (sessoes_valor != '1') { /*nomenclatura plirais*/
+        document.getElementById('title_sessao').innerHTML = sessoes_valor + ' sessões restantes'
     } else {
-        document.getElementById('title_sessao').innerHTML = sessoes_valor + 'sessão restante'
+        document.getElementById('title_sessao').innerHTML = sessoes_valor + ' sessão restante'
     }
 
     let title = document.getElementById('title')
@@ -122,7 +134,7 @@ function momentoPausa() {
 
                 clearInterval(min_interval) //verificar se acabaram os minutos
                 clearInterval(seg_interval)
-                if (sessoes <= 0) {
+                if (ses <= 0) {
                     final.play()
                     localStorage.clear()
 
