@@ -23,7 +23,7 @@
         <a class="navbar-brand text-white fw-bold" href="index.html">Timer Pomodoro</a>
 
         <div class="ml-auto">
-                
+
             <!--vai de dar margem automatica-->
             <a onclick="pausar()">
                 <i id='pause' class="fa fa-pause text-white" style="font-size: 25pt; display: none;"
@@ -101,7 +101,8 @@
                         <div class="row mt-5 mb-5 d-flex justify-content-center">
                             <div class="col-md-9">
                                 <!-- 9 colunas pois é a soma dos mes imputs-->
-                                <button classe='botao' onclick="iniciar()" class="btn shadow btn-lg btn-block text-white" style="background-color:#800080;">
+                                <button classe='botao' onclick="iniciar()"
+                                    class="btn shadow btn-lg btn-block text-white" style="background-color:#800080;">
                                     Iniciar
                                 </button>
                             </div>
@@ -139,45 +140,48 @@
                 <div class="col-5 pl-0">
                     <h2 id="seconds_ok"></h2>
                 </div>
-            </div>
+            </div><!-- /Relogio -->
 
-            <!-- /Relogio -->
+
+
             <div class="row mt-5">
                 <div class="col">
                     <h3 id="title_sessao" class="text-center text-secondary"></h3>
                 </div>
             </div>
 
+        </div>
+        <!--timer FECHA-->
 
-            <!--timer FECHA-->
 
-            <!--FINALIZAÇÃO-->
-            <div id="fim" style="display: none;">
-                <h1 class="text-success text-center">Parabéns! Você finalizou suas tarefas.</h1>
-                <div class="row mt-5 mb-5 d-flex justify-content-center">
-                    <div class="col-md-9 d-flex justify-content-center">
-                        <a href="./index.html" class="btn shadow btn-lg"style="background-color:#800080;">Inicio</a>
-                    </div>
+        <!-- Finalização -->
+        <div id="final" style="display: none;">
+            <h1 class="text-success text-center">Parabéns! Você finalizou suas tarefas.</h1>
+            <div class="row mt-5 mb-5 d-flex justify-content-center">
+                <div class="col-md-9 d-flex justify-content-center">
+                    <a href="./index.html" class="btn shadow btn-lg" style="background-color:#800080;">Inicio</a>
                 </div>
             </div>
-            <!--FINAL FINZALIZAÇÃO-->
-
         </div>
+        <!-- /Finalização -->
 
-        <!--FINAL container-->
 
 
-        <!--JS do bootstrap-->
-        <script src="./script.js"></script>
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.bundle.min.js"
-            integrity="sha384-JEW9xMcG8R+pH31jmWH6WWP0WintQrMb4s7ZOdauHnUtxwoG2vI5DkLtS3qm9Ekf"
-            crossorigin="anonymous"></script>
-        <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.1/dist/umd/popper.min.js"
-            integrity="sha384-SR1sx49pcuLnqZUnnPwx6FCym0wLsk5JZuNx2bPPENzswTNFaQU1RDvt3wT4gWFG"
-            crossorigin="anonymous"></script>
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.min.js"
-            integrity="sha384-j0CNLUeiqtyaRmlzUHCPZ+Gy5fQu0dQ6eZ/xAww941Ai1SxSY+0EQqNXNE6DZiVc"
-            crossorigin="anonymous"></script>
+    </div>
+    <!--FINAL container-->
+
+
+    <!--JS do bootstrap-->
+    <script src="./script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-JEW9xMcG8R+pH31jmWH6WWP0WintQrMb4s7ZOdauHnUtxwoG2vI5DkLtS3qm9Ekf"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.1/dist/umd/popper.min.js"
+        integrity="sha384-SR1sx49pcuLnqZUnnPwx6FCym0wLsk5JZuNx2bPPENzswTNFaQU1RDvt3wT4gWFG"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.min.js"
+        integrity="sha384-j0CNLUeiqtyaRmlzUHCPZ+Gy5fQu0dQ6eZ/xAww941Ai1SxSY+0EQqNXNE6DZiVc"
+        crossorigin="anonymous"></script>
 
 </body>
 

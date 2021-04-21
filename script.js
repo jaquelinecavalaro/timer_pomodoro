@@ -30,17 +30,17 @@ function iniciar() {
         acao.focus() /*ele vai entrar no campo e ficar com a setinha piscando*/
     } else if (pausa.value == 0) {
         document.getElementById('erro_pausa').innerHTML = "Adicione quantidade de pausa!"
-        acao.focus()
+        pausa.focus()
     } else if (sessoes.value == 0) {
         document.getElementById('erro_sessoes').innerHTML = "Adicione as sessões!"
-        acao.focus()
+        sessoes.focus()
     } else {
         lofi.play()
         pause.style.setProperty("display", "block", "important")
 
         localStorage.setItem('acao', String(acao.value))
-        localStorage.setItem('pausa', String(acao.value))
-        localStorage.setItem('sessoes', String(acao.value))
+        localStorage.setItem('pausa', String(pausa.value))
+        localStorage.setItem('sessoes', String(sessoes.value))
 
         // Mostrar div do timer, com o titulo, relógio e quantidade de sessões
         document.getElementById('config').style.setProperty('display', 'none', 'important')/*quero que o config suma antes de aparecer o relogio na tela*/
@@ -135,12 +135,17 @@ function momentoPausa() {
                 clearInterval(min_interval) //verificar se acabaram os minutos
                 clearInterval(seg_interval)
                 if (ses <= 0) {
+                    // Toca o audio final
                     final.play()
+                    // Limpa o localStorage
                     localStorage.clear()
-
+     
+                    // Esconde o config
                     document.getElementById('config').style.setProperty('display', 'none', 'important')
+                    // Esconde o Timer
                     document.getElementById('timer').style.setProperty('display', 'none', 'important')
-                    document.getElementById('fim').style.setProperty('display', 'block', 'important')
+                    // Mostra a mensagem de finalização e o botão de inicio
+                    document.getElementById("final").style.setProperty('display', 'block', 'important')
 
                 } else {
                     volta.play();
